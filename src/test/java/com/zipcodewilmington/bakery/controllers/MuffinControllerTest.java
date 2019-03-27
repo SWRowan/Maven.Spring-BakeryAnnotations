@@ -57,7 +57,8 @@ public class MuffinControllerTest {
                 .accept(MediaType.APPLICATION_JSON)
                 .content(expectedContent)
             )
-            .andExpect(MockMvcResultMatchers.status().isOk())
+           // .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.status().isCreated())
             .andExpect(MockMvcResultMatchers.content().string(expectedContent));
     }
 }
